@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCurrentRegistries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurrentRegistries.Designer.cs">
+      <DependentUpon>frmCurrentRegistries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOldRegistries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOldRegistries.Designer.cs">
+      <DependentUpon>frmOldRegistries.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCurrentRegistries.resx">
+      <DependentUpon>frmCurrentRegistries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +94,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\business\business.csproj">
+      <Project>{e64771dd-012e-4abf-ba70-2326fb9c9ec8}</Project>
+      <Name>business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\domain\domain.csproj">
+      <Project>{8c47a650-fe2d-499b-b93d-70825890c7e6}</Project>
+      <Name>domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
